@@ -1,0 +1,9 @@
+.myBg{
+    background-color: #1abc9c;
+}
+.line{
+    background-color: white;
+    width: 90px;
+    height: 5px;
+    border-radius: 3px;
+}

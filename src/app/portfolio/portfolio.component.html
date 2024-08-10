@@ -1,0 +1,43 @@
+<section>
+  <div class="container position-relative">
+    <div class="row position-relative my-5 py-5">
+      <h2 class="text-uppercase my-3 fs-1 fw-bold text-center mt-5 pt-5">
+        portfolio component
+      </h2>
+      <!-- star -->
+      <div class="d-flex justify-content-center align-items-center pb-2">
+        <div class="line ms-3"></div>
+        <i class="fa-regular fs-4 mx-2 fa-star"></i>
+        <div class="line me-3"></div>
+      </div>
+
+      @for(img of portfolio; track $index){
+      <div class="col-md-4 gy-3" data-bs-toggle="modal" data-bs-target="#m">
+        <div class="layer text-center py-5">
+          <i class="fa-solid fs-1 text-light my-3 py-5 fa-plus"></i>
+        </div>
+        <div id="m" class="modal">
+          <div class="modal-dialog">
+            <div class="modal-content my-5">
+              <img [src]="img.imgSrc" class="w-100" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <img
+          id="img"
+          (click)="click($event)"
+          [src]="img.imgSrc"
+          class="w-100"
+          [alt]="img.name"
+        />
+      </div>
+      }
+    </div>
+
+    <!-- modal button -->
+    <!-- <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#m">modal start</button> -->
+ 
+    <!-- modal -->
+  </div>
+</section>

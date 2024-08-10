@@ -1,0 +1,10 @@
+*{
+    background-color: #1abc9c;
+    color: white;
+}
+.line{
+    background-color: white;
+    width: 90px;
+    height: 5px;
+    border-radius: 3px;
+}
